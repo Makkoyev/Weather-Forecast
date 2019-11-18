@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WeatherForecast - WebApplication</title>
+    <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="~/css/main.css" />
+</head>
+<body>
+    <nav id="nav-bar">
+        <div class="logo">
+            <a href="/">Weather Forecast</a>
+        </div>
+        <ul>
+            <li><a href="/">Home</a><i class="fas fa-home fa-lg"></i></li>
+            <li><a href="forecast">Forecast</a><i class="fas fa-wind fa-lg"></i></li>
+        </ul>
+    </nav>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer id="footer">
+        <ul>
+            <li><a href="/">About</a><i class="fas fa-user fa-lg"></i></i></li>
+            <li><a href="/">GitHub</a><i class="fab fa-github fa-lg"></i></li>
+            <li><a href="/">LinkedIn</a><i class="fab fa-linkedin fa-lg"></i></li>
+        </ul>
+    </footer>
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/js/Manipulation.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

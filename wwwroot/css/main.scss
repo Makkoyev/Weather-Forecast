@@ -1,0 +1,211 @@
+// IMPORT MONTSERRAT 300 & 400
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap');
+// COLOR VARIABLES
+$SMOKY_BLACK: #0F0E0E;
+$WHITE_SMOKE: #FBF5F3;
+$PEWTER_BLUE: #8DAA9D;
+$BURGUNDY: #7B0828;
+$WINE_DREGS: #522B47;
+$SCREAMIN_GREEN: #61FF7E;
+$MAGIC_MINT: #A6EBC9;
+
+// HTML STYLING
+html * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+// NAVIGATION
+#nav-bar {
+  background: rgba($SMOKY_BLACK, .85);
+  display: flex;
+  justify-content: space-evenly;
+  height: 10vh;
+  .logo {
+    align-self: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    justify-self: center;
+    a {
+      text-decoration: none;
+      color: $WHITE_SMOKE;
+      transition-duration: 1s;
+      &:hover {
+        color: $MAGIC_MINT;
+      }
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    li {
+      padding: 1rem;
+      list-style: none;
+      display: flex;
+      flex-direction: row-reverse;
+      align-self: center;
+      a {
+        text-transform: uppercase;
+        color: $WHITE_SMOKE;
+        font-weight: 300;
+        text-decoration: none;
+        transition-duration: 1s;
+        &:hover {
+          color: $MAGIC_MINT;
+          & + i {
+            color: $MAGIC_MINT;
+            transform: translateX(-5px) scale(1.1) rotate(-15deg);
+          }
+        }
+      }
+      i {
+        color: $WHITE_SMOKE;
+        margin-right: .2rem;
+        transition-duration: .5s;
+      }
+    }
+  }
+}
+// CONTAINER
+.container {
+  width: 90%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(80vh - 1rem * 2);
+}
+// FOOTER
+#footer {
+  background: rgba($SMOKY_BLACK, .85);
+  display: flex;
+  justify-content: space-evenly;
+  height: 10vh;
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    li {
+      padding: 1rem;
+      list-style: none;
+      display: flex;
+      flex-direction: row-reverse;
+      align-self: center;
+      a {
+        text-transform: uppercase;
+        color: $WHITE_SMOKE;
+        font-weight: 300;
+        text-decoration: none;
+        transition-duration: 1s;
+        &:hover {
+          color: $MAGIC_MINT;
+          & + i {
+            color: $MAGIC_MINT;
+            transform: translateX(-5px) scale(1.1) rotate(-15deg);
+          }
+        }
+      }
+      i {
+        color: $WHITE_SMOKE;
+        margin-right: .2rem;
+        transition-duration: .5s;
+      }
+    }
+  }
+}
+
+// TABLE LAYOUT
+#weatherTable {
+  margin: 0 auto;
+  border-collapse: collapse;
+  #tableHead {
+    background: $PEWTER_BLUE;
+    tr {
+      th {
+        padding: 1rem;
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+    }
+  }
+  #tableBody {
+    tr {
+      th {
+        font-weight: bold;
+      }
+      td {
+        padding: 1rem;
+      }
+    }
+    // Adding Even & Odd background
+    tr:nth-child(odd){
+      background: rgba($SMOKY_BLACK, .15);
+    }
+    tr:nth-child(even){
+      background: rgba($SMOKY_BLACK, .35);
+    }
+  }
+}
+// Button Styling // btn refresh-weather
+.btn {
+  padding: 1rem;
+  background: rgba($SMOKY_BLACK, .75);
+  border: none;
+  border-radius: 2px;
+  transition-duration: .5s;
+  &:hover{
+    cursor: pointer;
+    background: rgba($SMOKY_BLACK, .55);
+  }
+}
+.refresh-weather {
+  align-self: center;
+  margin-top: 1rem;
+  color: $WHITE_SMOKE;
+  &:focus{
+    outline: none;
+  }
+}
+.weatherSlideshow {
+  height: 450px;
+  margin-bottom: 1rem;
+  background: url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') center center;
+  background-size: cover;
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  .arrow-left{
+    position: absolute;
+    left: 32px;
+    top: calc(50% - 16px);
+    color: $WHITE_SMOKE;
+  }
+  .arrow-right{
+    position: absolute;
+    right: 32px;
+    top: calc(50% - 16px);
+    color: $WHITE_SMOKE;
+  }
+  .arrow {
+    transition-duration: .2s;
+    &:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+  .weatherDescription {
+    align-self: flex-end;
+    display: flex;
+    top: 75%;
+    height: 25%;
+    width: 100%;
+    background: rgba($SMOKY_BLACK, .55);
+    p {
+      padding: .4rem;
+      color: $WHITE_SMOKE;
+      font-size: 14px;
+    }
+  }
+}
