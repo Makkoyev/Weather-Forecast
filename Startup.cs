@@ -42,7 +42,7 @@ namespace WebApplication4
 
             app.UseMvc(route =>
             {
-                route.MapRoute("default", "{controller=Home}/{action=Index}");
+                route.MapRoute("default", "{controller=Forecast}/{action=Index}");
             });
         }
     }

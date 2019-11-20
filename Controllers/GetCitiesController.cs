@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Net;
-using System.Net.Http;
 
 namespace WebApplication4.Controllers
 {
